@@ -210,13 +210,13 @@ export default function Navbar() {
               Reward 
               <motion.div
                 animate={contact ? {
-                  x: aboutHover ? -670 : skillHover ? -395 : projectHover ? -195 : 3,
-                  width: aboutHover ? 100 : skillHover ? 70 : projectHover ? 70 : 100,
+                  x: aboutHover ? -605 : skillHover ? -390 : projectHover ? -195 : 3,
+                  width: aboutHover ? 80 : skillHover ? 70 : projectHover ? 70 : 100,
                 } : ""}
                 transition={{
                   type: "spring",
-                  stiffness: aboutHover || skillHover ? 170 : 200,
-                  damping: aboutHover || skillHover ? 12 : 7,
+                  stiffness: aboutHover || skillHover ? 100 : 200,
+                  damping: aboutHover || skillHover ? 12 : 10,
                 }}
                 className={`absolute -z-10 bottom-0 left-0 h-2 ${contact ? 'bg-[#93a5f3]/70' : ''} rounded-full`}
                 aria-hidden="true"
