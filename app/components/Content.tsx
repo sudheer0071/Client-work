@@ -42,22 +42,23 @@ export default function Content() {
             {items.map((item,idx)=> <Item key={idx} name={item.name} link={item.link} />)} 
           </div>
           <div className=' flex justify-center gap-10 mt-10'>
-         <div className=' border-2 p-2 rounded-full hover:bg-orange-400 transition-all duration-500'>
+         <div className=' border-2 p-2 rounded-full hover:bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:scale-110 transition-all duration-500'>
           <a href="https://www.instagram.com/futcoinshop_/">
             <Instagram size={30} className=' '/> 
           </a>
          </div>
-         <div className=' border-2 p-2 rounded-full hover:bg-blue-500 transition-all duration-500'>
+         <div className=' border-2 p-2 rounded-full  hover:scale-110  hover:bg-blue-500 transition-all duration-500'>
           <a href="https://twitter.com/FUTCoinShop">
             <Twitter size={30} className=' '/>
           </a>
          </div> 
           </div>
           <div className=' flex justify-center mt-5'>
-         <div className=' text-lg text-center font-bold mt-7'>
+         <div className=' absolute bottom-14 text-lg text-center font-bold mt-7'>
+                <p className='  text-base  text-slate-500'>All Rights Reserved © 2024</p>
                <p>Payment gateways powered by <a href="https://sellix.io/">Sellix</a></p>
                <img className=' mt-4' src="https://futcoinshop.com/images/p-method.png" alt="" />
-             <div>
+             <div className=' font-normal text-slate-300 mt-11'>
               Based in the USA
               <img width={20} className=' ml-4 inline ' src="https://futcoinshop.com/images/united-states-flag-icon.svg" alt="" />
              </div>
@@ -82,11 +83,11 @@ const Section1 = () => {
 const Section2 = () => {
     return (
         <div className='flex justify-between p-3 items-end'>
-          <div className=' absolute bottom-0 p-3'>
-            <h1 className='text-[8vw] leading-[0.8] mt-10 bg-gradient-to-r from-pink-200 to-indigo-300 mx-3 text-transparent bg-clip-text '>FutCoin shop</h1>
+          <div className=' absolute bottom-0 left-0 p-3 z-[-2]'>
+            <h1 className='text-[14vw] leading-[0.8] mt-10 bg-gradient-to-r  from-pink-100 to-indigo-300 mx-3 text-transparent bg-clip-text text-left opacity-10'>FutCoin shop</h1>
           </div>
           <div className=' absolute right-0 bottom-0 p-3'>
-            <p>©copyright</p>
+            {/* <p>©copyright</p> */}
           </div>
         </div>
     )

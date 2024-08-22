@@ -33,11 +33,11 @@ export function ServiceCard() {
   ]
 
   return (
-    <div className="w-full flex items-center justify-center gap-10 ">
+    <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 ">
       <PinContainer
         type="ps5"
-        title="/ui.aceternity.com"
-        href="https://twitter.com/mannupaaji" 
+        title="Futcoin.com/ps5"
+        href="/" 
       >
         <div className="  flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
@@ -63,8 +63,8 @@ export function ServiceCard() {
       </PinContainer>
       <PinContainer
       type="xbox"
-        title="/ui.aceternity.com"
-        href="https://twitter.com/mannupaaji"
+        title="Futcoin.com/Xbox"
+        href="/"
       >
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
@@ -102,8 +102,8 @@ export function ServiceCard() {
       </PinContainer>
       <PinContainer
       type="pc"
-        title="/ui.aceternity.com"
-        href="https://twitter.com/mannupaaji"
+        title="Futcoin.com/pc"
+        href="/"
       >
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">

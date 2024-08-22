@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <div className=" flex justify-center">
 
-      <div id="box" className=" w-full flex justify-center shadow-lg shadow-[#543e70] z-[999] fixed font-medium  backdrop-blur-md rounded-fll px-3 py-2">
+      <div id="box" className=" w-full flex justify-center shadow-lg shadow-[#543e70] z-[999] fixed font-medium backdrop-brightness-75 backdrop-blur rounded-fll px-3 py-2">
         <div
         onClick={(event:React.SyntheticEvent)=>{  
           setScrollState(false)

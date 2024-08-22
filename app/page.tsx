@@ -20,13 +20,16 @@ import { Tabs } from "./components/ui/tabs";
 import Navbar from "./components/NavBar";
 import { TracingBeam } from "./components/ui/TracingScoll";
 import { useRecoilState } from "recoil";
-import { aboutState, footerState } from "./recoilContextProvider";
+import { aboutState, contactState, footerState, projectState, skillState } from "./recoilContextProvider";
 
 
 export default function Main() {
 
   const[footer] = useRecoilState(footerState)
   const [about, setAbout] = useRecoilState(aboutState)
+  const [skill, setSkill] = useRecoilState(skillState)
+  const [project, setProject] = useRecoilState(projectState)
+  const [contact, setContact] = useRecoilState(contactState)
 
 
   const joinRef = useRef(null);
@@ -37,12 +40,43 @@ export default function Main() {
 
   const [bgColor, setBgColor] = useState('rgba(255, 255, 255, 0.5)');
 
+  const divRef1 = useRef(null);
   const divRef = useRef(null);
   const divRef2 = useRef(null);
   const divRef3 = useRef(null);
   const divRef4 = useRef(null);
   const divRef5 = useRef(null);
+  const divRef6 = useRef(null);
+ 
+useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // Your action here, e.g., console.log or a function call
+          setAbout(true)
+          setSkill(false) 
+          setProject(false)
+          setContact(false)
+          console.log('Div is in view');
+        } else {
+          console.log('Div is out of view');
+          // setInView(false)
+        }
+      },
+      { threshold: 0.1 } // Trigger when 10% of the div is in view
+    );
 
+    if (divRef1.current) {
+      observer.observe(divRef1.current);
+    }
+
+    return () => {
+      if (divRef1.current) {
+        observer.unobserve(divRef1.current);
+      }
+    };
+  }, []);
+ 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -68,11 +102,7 @@ export default function Main() {
       }
     };
   }, []);
-
-useEffect(()=>{
-  setAbout(true)
-},[])
-
+ 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -124,7 +154,7 @@ useEffect(()=>{
       }
     };
   }, []);
-
+ 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -135,6 +165,37 @@ useEffect(()=>{
         } else {
           console.log('Div is out of view');
           setInView(false)
+        }
+      },
+      { threshold: 0.2 } // Trigger when 10% of the div is in view
+    );
+
+    if (divRef4.current) {
+      observer.observe(divRef4.current);
+    }
+
+    return () => {
+      if (divRef4.current) {
+        observer.unobserve(divRef4.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // Your action here, e.g., console.log or a function call
+          console.log('Div is in view');
+          setAbout(false)
+          setSkill(true) 
+          setProject(false)
+          setContact(false)
+        } else {
+          console.log('Div is out of view');
+          setAbout(true)
+          setSkill(false) 
+          // setInView(false)
         }
       },
       { threshold: 0.2 } // Trigger when 10% of the div is in view
@@ -166,13 +227,13 @@ useEffect(()=>{
       { threshold: 0.2 } // Trigger when 10% of the div is in view
     );
 
-    if (divRef4.current) {
-      observer.observe(divRef4.current);
+    if (divRef6.current) {
+      observer.observe(divRef6.current);
     }
 
     return () => {
-      if (divRef4.current) {
-        observer.unobserve(divRef4.current);
+      if (divRef6.current) {
+        observer.unobserve(divRef6.current);
       }
     };
   }, []);
@@ -403,7 +464,7 @@ useEffect(()=>{
 
     
 
-    <div id="Home" className=" overflow-hidden">
+    <div ref={divRef1} id="Home" className=" overflow-hidden">
       <Home />
     </div>
 
@@ -415,9 +476,9 @@ useEffect(()=>{
 
  
     <div className=" bg-[#2c164b] pb- 24">
-      <motion.div ref={divRef3} style={{ opacity: progress4 }} className=" pt-40   flex flex-col justify-center items-center bg-[#150827]">
+      <motion.div ref={divRef3} style={{ opacity: progress4 }} className=" pt-40 flex flex-col justify-center items-center bg-[#150827]">
         <div className=" inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
-        <div className="mt-8 sticky top-14 bg-gradient-to-br from-slate-200 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
+        <div className="mt-8 sticky top-24 bg-gradient-to-br from-slate-200 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
           Why Choose <div className="bg-gradient-to-r from-sky-500 to-indigo-600 inline-block text-transparent bg-clip-text ">FCS</div>
         </div>
         <motion.div ref={divRef} className=" z-50 mt-"
@@ -433,7 +494,7 @@ useEffect(()=>{
     </div>
 
    <div className=" bg-[#150827]">
-    <motion.div ref={joinRef} className={` bg-gradient-to-r from-cyan-900 to-indigo-950 transition-all duration-500 relative z-10 pt-32    `}
+    <motion.div ref={joinRef} className={` bg-gradient-to-r from-cyan-900 to-indigo-950 transition-all duration-500 relative pt-32    `}
       style={{
         opacity: scrollYProgress,
         transform: inView ? 'translateY(0)' : 'translateY(10px)',

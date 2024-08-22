@@ -51,7 +51,7 @@ export default function Footer() {
       // style={{
       //   opacity:!footer?scrollYProgress:1,
       //   transform: footer ? 'translateY(0)' : 'translateY(10px)', }}
-      className={`relative h-[500px] bg-gradient-to-r from-cyan-900 to-indigo-950 p-3 overflow-hidden ${footer?'z-[1]':'z-[-1]'}  `}
+      className={`relative h-[60vh] bg-gradient-to-r from-zinc-900 to-indigo-950 p-3 overflow-hidden ${footer?'z-[1]':'z-[-1]'}  `}
       // style={{clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)"}}
     >
       <div className='fixed bottom-0 h-[800px] w-full mt-40'>

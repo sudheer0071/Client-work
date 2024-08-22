@@ -19,7 +19,7 @@ export function ChooseCard({header, desc, image,i,range,progress, targetScale}:{
   );
 
   return ( 
-    <div  ref={container}  className=" flex justify-center items-center h-screen sticky top-20">
+    <div  ref={container}  className=" flex justify-center items-center h-screen sticky top-32">
       <motion.div  style={{ scale, top:`calc(-10% + ${i*35}px)`}} className=" relative mt-">
         <div className="   absolute h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.85] bg-red-500 rounded-full blur-3xl" />
         <div className="relative shadow-lg shadow-sky-800 w-full  bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex justify-center items-center">

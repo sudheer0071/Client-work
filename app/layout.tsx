@@ -4,6 +4,7 @@ import "./globals.css";
 import RecoilContextProvider from "./recoilContextProvider";
 import Footer from "./components/Footer";
 import Navbar from "./components/NavBar";
+import SmoothScrolling from "./components/Smoothscroll";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,11 +22,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} scroll`}>
         <RecoilContextProvider>
+          <SmoothScrolling> 
         <div id="NAV bar">
    <Navbar/>
     </div>
         {children} 
         <Footer/>
+          </SmoothScrolling>
         </RecoilContextProvider>
         </body>
     </html>
