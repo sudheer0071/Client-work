@@ -19,9 +19,13 @@ import { HowitWorks } from "./components/HowItworks";
 import { Tabs } from "./components/ui/tabs";
 import Navbar from "./components/NavBar";
 import { TracingBeam } from "./components/ui/TracingScoll";
+import { useRecoilState } from "recoil";
+import { footerState } from "./recoilContextProvider";
 
 
 export default function Main() {
+
+  const[footer] = useRecoilState(footerState)
 
   const joinRef = useRef(null);
   const chooseRef = useRef(null);
@@ -399,8 +403,8 @@ export default function Main() {
       <Home />
     </div>
 
-    <div id="Buy" className=" bg-slate-900">
-      <motion.div ref={divRef5} className="bg-[#2c164b] h-[130vh] "style={{ opacity: progress5 , transform: inView ? 'translateY(0)' : 'translateY(100px)', }}>
+    <div id="Buy" className=" bg-slate-900 z-30">
+      <motion.div ref={divRef5} className="bg-[#2c164b] h-[130vh] z-30 "style={{ opacity: progress5 , transform: inView ? 'translateY(0)' : 'translateY(100px)', }}>
         <Services header="Our Safe Trading Service" />
       </motion.div>
     </div>
@@ -425,7 +429,7 @@ export default function Main() {
     </div>
 
    <div className=" bg-[#150827]">
-    <motion.div ref={joinRef} className={` bg-gradient-to-r from-cyan-900 to-indigo-950 backdrop-blur-md transition-all duration-500 relative z-0 pt-32    `}
+    <motion.div ref={joinRef} className={` bg-gradient-to-r from-cyan-900 to-indigo-950 transition-all duration-500 relative z-10 pt-32    `}
       style={{
         opacity: scrollYProgress,
         transform: inView ? 'translateY(0)' : 'translateY(10px)',
@@ -437,7 +441,7 @@ export default function Main() {
 <TracingBeam>
 <div className="  bg-gradient-to-r from-cyan-900  to-indigo-950 backdrop-blur-md">
  <motion.div ref={divRef2} style={{ opacity: progress2 , transform: inView ? 'translateY(0)' : 'translateY(100px)', }} className=" bg-slate-900 pt-2 z-40 "> 
-      <div className=" text-5xl font-bold sticky top-20 p-3 justify-center flex w-full  z-50 ">
+      <div className={` ${footer?' hidden':''} text-5xl font-bold sticky top-20 p-3 justify-center flex w-full  z-50 `}>
         How <div className=" inline bg-gradient-to-r from-pink-400 to-indigo-500 mx-3 text-transparent bg-clip-text "> FCS</div> Works
       </div>
       <motion.div ref={divRef4} style={{ opacity: progress2 , transform: inView ? 'translateY(0)' : 'translateY(100px)', }} className="bg-[#150827] ">

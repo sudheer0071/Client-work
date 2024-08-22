@@ -44,6 +44,7 @@ export const StickyScroll = ({
     "var(--slate-900)",
     "var(--sky-800)",
     "var(--indigo-950)",
+    "var(--indigo-950)",
   ];
 
   const images = [

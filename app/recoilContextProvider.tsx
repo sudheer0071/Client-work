@@ -56,6 +56,11 @@ export const smallState = atom({
   default:false  
 })
 
+export const footerState  = atom({
+  key:'footer',
+  default:false
+})
+
 export default function RecoilContextProvider({ children }:any){
   return <RecoilRoot>{children}</RecoilRoot>
 }
