@@ -36,8 +36,8 @@ export function ServiceCard() {
     <div className="w-full flex items-center justify-center gap-10 ">
       <PinContainer
         type="ps5"
-        title="/ui.aceternity.com"
-        href="https://twitter.com/mannupaaji" 
+        title="/futcoin/ps5"
+        href="/" 
       >
         <div className="  flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
@@ -63,8 +63,8 @@ export function ServiceCard() {
       </PinContainer>
       <PinContainer
       type="xbox"
-        title="/ui.aceternity.com"
-        href="https://twitter.com/mannupaaji"
+        title="/futcoin/Xbox"
+        href="/"
       >
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
@@ -102,7 +102,7 @@ export function ServiceCard() {
       </PinContainer>
       <PinContainer
       type="pc"
-        title="/ui.aceternity.com"
+        title="/futcoin/Pc"
         href="https://twitter.com/mannupaaji"
       >
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
