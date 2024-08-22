@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.gallery{ 
+  position: relative;
+  top: 6.5rem;
+  width: 50rem; 
+
+  transform-style: preserve-3d;
+  transform: perspective(2000px) rotateX(-5deg) rotateY(0deg)  ;
+  transition: 2s;
+  
+  /* animation:  circular-rotate 10s linear infinite; */
+}
+
+@keyframes circular-rotate {
+  to {
+    transform: perspective(2000px) rotateX(15deg) rotateY(360deg) ;
+  }
+}
+
+.gallery img{
+  position: absolute; 
+  width:70%; 
+  -webkit-box-reflect: below .3rem linear-gradient(transparent,transparent,transparent,transparent,transparent, #a71a1a5e);
+}
+ 
+
+.ps5{
+  box-shadow: 0 0 10px 5px rgba(0, 217, 255, 0.925); 
+}
+
+
+.xbox{
+  box-shadow: 0 0 10px 5px #62D96B
+}
+
+
+.pc{
+  box-shadow: 0 0 10px 5px #FFA500; 
+}
+
