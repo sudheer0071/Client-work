@@ -16,6 +16,10 @@ import { motion, useScroll } from "framer-motion";
 import Lenis from '@studio-freight/lenis'
 import SmoothScrolling from "./components/Smoothscroll";
 import { HowitWorks } from "./components/HowItworks";
+import { Tabs } from "./components/ui/tabs";
+import Navbar from "./components/NavBar";
+import { TracingBeam } from "./components/ui/TracingScoll";
+
 
 export default function Main() {
 
@@ -84,7 +88,6 @@ export default function Main() {
       }
     };
   }, []);
-
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -163,7 +166,6 @@ export default function Main() {
       }
     };
   }, []);
-
 
   useEffect(() => {
 
@@ -258,15 +260,146 @@ export default function Main() {
     offset: ['start end', 'start start']
   })
 
+//   const tabs = [
+//     {
+//       title: "Home",
+//       value: "Home",
+//       content: (
+//         <div className={` relative w-full ${!inView ? '  ' : ''}    flex flex-col justify-center rounded-lg scroll-smooth `} >
+//     <SmoothScrolling> 
+//     {/* <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />  */}
+//     {/* <Boxes />   */}
+//     <div className=" overflow-hidden">
+//       <Home />
+//     </div>
+
+//     <div id="Buy" className=" bg-slate-900">
+//       <motion.div ref={divRef5} className="bg-[#2c164b] h-[130vh] "style={{ opacity: progress5 , transform: inView ? 'translateY(0)' : 'translateY(100px)', }}>
+//         <Services header="Our Safe Trading Service" />
+//       </motion.div>
+//     </div>
+
+ 
+//     <div className=" bg-[#2c164b] pb- 24">
+//       <motion.div ref={divRef3} style={{ opacity: progress4 }} className=" pt-40   flex flex-col justify-center items-center bg-[#150827]">
+//         <div className=" inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+//         <div className="mt-8 sticky top-6 bg-gradient-to-br from-slate-200 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
+//           Why Choose <div className="bg-gradient-to-r from-sky-500 to-indigo-600 inline-block text-transparent bg-clip-text ">FCS</div>
+//         </div>
+//         <motion.div ref={divRef} className=" z-50 mt-"
+//         >
+//           {Choosecard.map((card, idx) => {
+//             const targetScale = 1 - ((Choosecard.length - idx) * 0.05);
+//             return (
+//               <ChooseCard i={idx} key={idx} header={card.header} desc={card.desc} image={card.img} range={[idx * 0.25, 1]} progress={progress3} targetScale={targetScale} />
+//             )
+//           })}
+//         </motion.div> 
+//       </motion.div>
+//     </div>
+
+//    <div className=" bg-[#150827]">
+//     <motion.div ref={joinRef} className={` bg-gradient-to-r from-cyan-900 to-indigo-950 backdrop-blur-md transition-all duration-500 relative z-0 pt-32    `}
+//       style={{
+//         opacity: scrollYProgress,
+//         transform: inView ? 'translateY(0)' : 'translateY(10px)',
+//       }}  >
+//       <Join />
+//     </motion.div>
+//    </div>
+
+// <div className="  bg-gradient-to-r from-cyan-900  to-indigo-950 backdrop-blur-md">
+//  <motion.div ref={divRef2} style={{ opacity: progress2 , transform: inView ? 'translateY(0)' : 'translateY(100px)', }} className=" bg-slate-900 pt-2 z-40 "> 
+//       <div className=" text-5xl font-bold sticky top-10 p-3 justify-center flex w-full  z-50 ">
+//         Why Choose <div className=" inline bg-gradient-to-r from-pink-400 to-indigo-500 ml-3 text-transparent bg-clip-text "> FCS</div>
+//       </div>
+//       <motion.div ref={divRef4} style={{ opacity: progress2 , transform: inView ? 'translateY(0)' : 'translateY(100px)', }} className="bg-[#150827] ">
+//         <HowitWorks/>
+//       </motion.div> 
+//  </motion.div>
+// </div>
+
+//     <div className=" z-50">
+//       {/* <Services header="Our Safe Trading Service" />  */}
+//     </div>
+//     </SmoothScrolling>
+//   </div>
+//       ),
+//     },
+//     {
+//       title: "Buy",
+//       value: "Buy",
+//       content: (
+//         <div id="Buy" className=" bg-slate-900">
+//         <motion.div ref={divRef5} className="bg-[#2c164b] h-[130vh] "style={{ opacity: progress5 , transform: inView ? 'translateY(0)' : 'translateY(100px)', }}>
+//           <Services header="Our Safe Trading Service" />
+//         </motion.div>
+//       </div>
+//       ),
+//     },
+//     {
+//       title: "Playground",
+//       value: "playground",
+//       content: (
+//         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+//           <p>Playground tab</p>
+//           {/* <DummyContent /> */}
+//         </div>
+//       ),
+//     },
+//     {
+//       title: "Join",
+//       value: "Join",
+//       content: (
+      
+//     <div className=" bg-[#2c164b] pb- 24">
+//     <motion.div ref={divRef3} style={{ opacity: progress4 }} className=" pt-40   flex flex-col justify-center items-center bg-[#150827]">
+//       <div className=" inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+//       <div className="mt-8 sticky top-6 bg-gradient-to-br from-slate-200 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
+//         Why Choose <div className="bg-gradient-to-r from-sky-500 to-indigo-600 inline-block text-transparent bg-clip-text ">FCS</div>
+//       </div>
+//       <motion.div ref={divRef} className=" z-50 mt-"
+//       >
+//         {Choosecard.map((card, idx) => {
+//           const targetScale = 1 - ((Choosecard.length - idx) * 0.05);
+//           return (
+//             <ChooseCard i={idx} key={idx} header={card.header} desc={card.desc} image={card.img} range={[idx * 0.25, 1]} progress={progress3} targetScale={targetScale} />
+//           )
+//         })}
+//       </motion.div> 
+//     </motion.div>
+//   </div>
+
+//       ),
+//     },
+//     {
+//       title: "Random",
+//       value: "random",
+//       content: (
+//         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+//           <p>Random tab</p>
+//           {/* <DummyContent /> */}
+//         </div>
+//       ),
+//     },
+//   ];
+ 
+
+
   return <div className={` relative w-full ${!inView ? '  ' : ''}    flex flex-col justify-center rounded-lg scroll-smooth `} >
     <SmoothScrolling> 
     {/* <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />  */}
-    {/* <Boxes />   */}
-    <div className=" overflow-hidden">
+     {/* <Boxes />   */}
+
+    <div id="NAV bar">
+   <Navbar/>
+    </div>
+
+    <div id="Home" className=" overflow-hidden">
       <Home />
     </div>
 
-    <div className=" bg-slate-900">
+    <div id="Buy" className=" bg-slate-900">
       <motion.div ref={divRef5} className="bg-[#2c164b] h-[130vh] "style={{ opacity: progress5 , transform: inView ? 'translateY(0)' : 'translateY(100px)', }}>
         <Services header="Our Safe Trading Service" />
       </motion.div>
@@ -276,7 +409,7 @@ export default function Main() {
     <div className=" bg-[#2c164b] pb- 24">
       <motion.div ref={divRef3} style={{ opacity: progress4 }} className=" pt-40   flex flex-col justify-center items-center bg-[#150827]">
         <div className=" inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
-        <div className="mt-8 sticky top-6 bg-gradient-to-br from-slate-200 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
+        <div className="mt-8 sticky top-14 bg-gradient-to-br from-slate-200 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
           Why Choose <div className="bg-gradient-to-r from-sky-500 to-indigo-600 inline-block text-transparent bg-clip-text ">FCS</div>
         </div>
         <motion.div ref={divRef} className=" z-50 mt-"
@@ -291,7 +424,7 @@ export default function Main() {
       </motion.div>
     </div>
 
-   <div id="Buy" className=" bg-[#150827]">
+   <div className=" bg-[#150827]">
     <motion.div ref={joinRef} className={` bg-gradient-to-r from-cyan-900 to-indigo-950 backdrop-blur-md transition-all duration-500 relative z-0 pt-32    `}
       style={{
         opacity: scrollYProgress,
@@ -300,19 +433,30 @@ export default function Main() {
       <Join />
     </motion.div>
    </div>
+
+<TracingBeam>
 <div className="  bg-gradient-to-r from-cyan-900  to-indigo-950 backdrop-blur-md">
  <motion.div ref={divRef2} style={{ opacity: progress2 , transform: inView ? 'translateY(0)' : 'translateY(100px)', }} className=" bg-slate-900 pt-2 z-40 "> 
-      <div className=" text-5xl font-bold sticky top-10 p-3 justify-center flex w-full  z-50 ">
-        Why Choose <div className=" inline bg-gradient-to-r from-pink-400 to-indigo-500 ml-3 text-transparent bg-clip-text "> FCS</div>
+      <div className=" text-5xl font-bold sticky top-20 p-3 justify-center flex w-full  z-50 ">
+        How <div className=" inline bg-gradient-to-r from-pink-400 to-indigo-500 mx-3 text-transparent bg-clip-text "> FCS</div> Works
       </div>
       <motion.div ref={divRef4} style={{ opacity: progress2 , transform: inView ? 'translateY(0)' : 'translateY(100px)', }} className="bg-[#150827] ">
         <HowitWorks/>
       </motion.div> 
  </motion.div>
 </div>
+</TracingBeam>
+
     <div className=" z-50">
       {/* <Services header="Our Safe Trading Service" />  */}
     </div>
     </SmoothScrolling>
   </div>
+
+// return (
+  //   <div className=" [perspective:1000px] relative b flex flex-col mx-auto w-full  items-start justify-start">
+  //     <Tabs tabs={tabs} />
+//   </div>
+// )
+
 }
