@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css"; 
 import RecoilContextProvider from "./recoilContextProvider";
 import Footer from "./components/Footer";
+import Navbar from "./components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} scroll`}>
         <RecoilContextProvider>
+        <div id="NAV bar">
+   <Navbar/>
+    </div>
         {children} 
         <Footer/>
         </RecoilContextProvider>

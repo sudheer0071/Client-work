@@ -20,12 +20,14 @@ import { Tabs } from "./components/ui/tabs";
 import Navbar from "./components/NavBar";
 import { TracingBeam } from "./components/ui/TracingScoll";
 import { useRecoilState } from "recoil";
-import { footerState } from "./recoilContextProvider";
+import { aboutState, footerState } from "./recoilContextProvider";
 
 
 export default function Main() {
 
   const[footer] = useRecoilState(footerState)
+  const [about, setAbout] = useRecoilState(aboutState)
+
 
   const joinRef = useRef(null);
   const chooseRef = useRef(null);
@@ -66,6 +68,10 @@ export default function Main() {
       }
     };
   }, []);
+
+useEffect(()=>{
+  setAbout(true)
+},[])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -395,9 +401,7 @@ export default function Main() {
     {/* <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />  */}
      {/* <Boxes />   */}
 
-    <div id="NAV bar">
-   <Navbar/>
-    </div>
+    
 
     <div id="Home" className=" overflow-hidden">
       <Home />

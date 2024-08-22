@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import { MotionConfig, motion } from "framer-motion";
 import { aboutHoverState, aboutState, contactHoverState, contactState, onPageState,  projectHoverState, projectState, scrollState, skillHoverState, skillState } from "@/app/recoilContextProvider";
 import { useRecoilState, useSetRecoilState } from "recoil";
+import Link from "next/link";
 
 export default function Navbar() {
 
@@ -99,9 +100,10 @@ export default function Navbar() {
               }}
  
               className="p-4 rounded-md text-sm lg:text-xl relative no-underline duration-300 ease-in bg-transparent text-zinc-100"
-              href="/#Home"
-            >
+              href="/"
+            > <Link href={'/'}>
               Home 
+            </Link>
               <motion.div
                 animate={about ? { x: contactHover ? 610 : projectHover ? 412 : skillHover ? 210 : 5, width: projectHover ? 70:contactHover?100 : 80 } : ''}
 
@@ -136,7 +138,9 @@ export default function Navbar() {
               className="p-4 rounded-md text-sm lg:text-xl relative no-underline duration-300 ease-in bg-transparent text-zinc-100"
               href="/#Buy"
             >
+              <Link href={'/#Buy'}> 
                Buy 
+            </Link>
               <motion.div
                 animate={skill ? {
                   x: aboutHover ? -210 : projectHover ? 200 : contactHover ? 395 : 0,
@@ -174,8 +178,10 @@ export default function Navbar() {
               }}
               className="p-4 rounded-md text-sm lg:text-xl relative no-underline duration-300 ease-in bg-transparent text-zinc-100"
               href="/sell"
-            >
+            > 
+            <Link href={'/sell'}> 
               Sell 
+            </Link>
               <motion.div
                 animate={project ? {
                   x: aboutHover ? -410 : skillHover ? -195 : contactHover ? 200 : 0,
@@ -205,9 +211,11 @@ export default function Navbar() {
                 setProject(false);
               }}
               className="p-4 rounded-md text-sm lg:text-xl relative no-underline duration-300 ease-in bg-transparent text-zinc-100" 
-              href="http://localhost:3000/reward"
+              href="/reward"
             >
+              <Link href={'/reward'}>
               Reward 
+            </Link>
               <motion.div
                 animate={contact ? {
                   x: aboutHover ? -605 : skillHover ? -390 : projectHover ? -195 : 3,
