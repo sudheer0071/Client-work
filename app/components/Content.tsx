@@ -61,7 +61,7 @@ export default function Content() {
           <div className=' flex justify-center mt-5'>
          <div className=' absolute bottom-8 text-lg text-center font-bold mt-'>
                  <p className=' text-sm'> <Phone size={15} className=' inline' /> +91 73397 44705</p>
-                <p className='  text-base  text-slate-500'>All Rights Reserved © 2024</p>
+                <p className='  text-base transition-all duration-1000 text-slate-400 dark:text-slate-500'>All Rights Reserved © 2024</p>
                <p>Payment gateways powered by <a href="https://sellix.io/">Sellix</a></p>
                <img className=' mt-4' src="https://futcoinshop.com/images/p-method.png" alt="" />
              <div className=' font-normal text-slate-300 mt-11'>

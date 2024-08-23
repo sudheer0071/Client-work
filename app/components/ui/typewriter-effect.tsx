@@ -54,7 +54,7 @@ export const TypewriterEffect = ({
     
             <div key={`word-${idx}`} className="inline-block font-sans">
 
-               {word.className?.includes('anmt')?<Cover className="bg-gradient-to-r from-pink-300 to-indigo-400 inline-block text-transparent bg-clip-text font-bold ml-4" > {word.text}</Cover>:''}
+               {word.className?.includes('anmt')?<Cover className="bg-gradient-to-r dark:from-pink-300 dark:to-indigo-400  from-pink-500 to-indigo-300 inline-block text-transparent bg-clip-text font-bold ml-4" > {word.text}</Cover>:''}
               {word.text.map((char, index) => (
                 <motion.span
                   initial={{}}

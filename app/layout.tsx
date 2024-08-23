@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-white dark:bg-black scroll`}>
+      <body className={`${inter.className} scroll`}>
         <RecoilContextProvider>
           <ThemeProvider
       //@ts-ignore

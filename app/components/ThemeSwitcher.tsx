@@ -10,14 +10,14 @@ const ThemeSwitcher = () => {
   }, []);
   console.log(currentTheme);
   return mount ? (
-    <div className="fixed right-5 z-[10000000000] max-lg:bottom-2.5 top-4">
+    <div className="fixed right-5 z-[10000000000] transition-all duration-1000 max-lg:bottom-2.5 top-4">
       <button
         onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
         type="button"
-        className="flex h-10 w-10 p-2 items-center justify-center rounded-md border border-gray-800 text-gray-800 focus:outline-none focus:ring-0 focus:ring-gray-200 dark:border-slate-300 dark:text-white"
+        className="flex h-10 w-10 p-2 transition-all duration-1000 items-center justify-center rounded-md border border-gray-300 text-gray-300 focus:outline-none focus:ring-0 focus:ring-gray-200 dark:border-slate-300 dark:text-white"
       >
         <svg
-          className="dark:hidden"
+          className="dark:hidden transition-all duration-1000"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@ const ThemeSwitcher = () => {
           <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
         </svg>
         <svg
-          className="hidden dark:block"
+          className="hidden dark:block transition-all duration-1000"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"

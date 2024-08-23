@@ -25,7 +25,7 @@ export default function Footer() {
       {
         root: null, // use the viewport as the root
         rootMargin: '300px',
-        threshold: 0.5, // trigger when 10% of the footer is in view
+        threshold: 0.6, // trigger when 10% of the footer is in view
       }
     );
 
@@ -51,7 +51,7 @@ export default function Footer() {
       // style={{
       //   opacity:!footer?scrollYProgress:1,
       //   transform: footer ? 'translateY(0)' : 'translateY(10px)', }}
-      className={`relative h-[60vh] bg-gradient-to-r from-zinc-900 to-indigo-950 p-3 overflow-hidden ${footer?'z-[1]':'z-[-1]'}  `}
+      className={`relative h-[60vh] bg-gradient-to-r transition-all duration-1000 from-zinc-500 to-indigo-600 dark:from-zinc-900 dark:to-indigo-950 p-3 overflow-hidden ${footer?'z-[1]':'z-[-1]'}  `}
       // style={{clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)"}}
     >
       <div className='fixed bottom-0 h-[800px] w-full mt-40'>

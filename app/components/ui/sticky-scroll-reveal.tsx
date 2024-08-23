@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
+import {useTheme} from "next-themes";
 import { cn } from "@/lib/utils";
 
 export const StickyScroll = ({
@@ -16,7 +17,9 @@ export const StickyScroll = ({
   contentClassName?: string;
 }) => {
   const [activeCard, setActiveCard] = React.useState(0);
+  const{theme} = useTheme()
   const ref = useRef<any>(null);
+
   const { scrollYProgress } = useScroll({
     // uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
     target: ref,
@@ -40,17 +43,24 @@ export const StickyScroll = ({
     setActiveCard(closestBreakpointIndex);
   });
 
+useEffect(()=>{
+  if (theme=='light'){
+    console.log("light moode !");
+  }
+},[theme])
+
   const backgroundColors = [
-    "var(--slate-900)",
-    "var(--sky-800)",
-    "var(--indigo-950)",
-    "var(--indigo-950)",
+    theme!='light'?"var(--slate-900)":'var(--slate-700)',
+    theme!='light'?"var(--sky-800)":'var(--sky-600)',
+    theme!='light'?"var(--indigo-950)":'var(--indigo-400)',
+    theme!='light'?"var(--indigo-950)":'var(--indigo-400)',
   ];
 
   const images = [
     "https://futcoinshop.com/images/image-1.png",
     "https://futcoinshop.com/images/image-2.png",
-    "https://futcoinshop.com/images/image-3.png"
+    "https://futcoinshop.com/images/image-3.png",
+    "https://futcoinshop.com/images/image-3.png",
   ]
   const [backgroundImage, setBackgroundImage] = useState(images[0]);
 
