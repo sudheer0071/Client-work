@@ -18,7 +18,7 @@ export function Join() {
 
   return (
     <div
-      className=" h-[500vh] transition-all duration-500 z-50"
+      className=" h-[300vh] transition-all duration-500 z-50"
       ref={ref}
     >
       <GoogleGeminiEffect

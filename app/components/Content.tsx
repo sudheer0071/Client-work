@@ -1,6 +1,6 @@
-import { Instagram, Twitter } from 'lucide-react'
-import React from 'react'
-
+import { Instagram, Phone, Twitter } from 'lucide-react'
+import React from 'react' 
+import { Discord } from './svg/Discord'
 export default function Content() {
 
  const items= [
@@ -42,6 +42,11 @@ export default function Content() {
             {items.map((item,idx)=> <Item key={idx} name={item.name} link={item.link} />)} 
           </div>
           <div className=' flex justify-center gap-10 mt-10'>
+         <div className=' border-2 p-1 rounded-full  hover:scale-110  hover:bg-[#5865F2] transition-all duration-500 '>
+          <a href="https://www.instagram.com/futcoinshop_/">
+             <Discord/>
+          </a>
+         </div>
          <div className=' border-2 p-2 rounded-full hover:bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:scale-110 transition-all duration-500'>
           <a href="https://www.instagram.com/futcoinshop_/">
             <Instagram size={30} className=' '/> 
@@ -54,7 +59,8 @@ export default function Content() {
          </div> 
           </div>
           <div className=' flex justify-center mt-5'>
-         <div className=' absolute bottom-14 text-lg text-center font-bold mt-7'>
+         <div className=' absolute bottom-8 text-lg text-center font-bold mt-'>
+                 <p className=' text-sm'> <Phone size={15} className=' inline' /> +91 73397 44705</p>
                 <p className='  text-base  text-slate-500'>All Rights Reserved © 2024</p>
                <p>Payment gateways powered by <a href="https://sellix.io/">Sellix</a></p>
                <img className=' mt-4' src="https://futcoinshop.com/images/p-method.png" alt="" />
@@ -84,7 +90,7 @@ const Section2 = () => {
     return (
         <div className='flex justify-between p-3 items-end'>
           <div className=' absolute bottom-0 left-0 p-3 z-[-2]'>
-            <h1 className='text-[14vw] leading-[0.8] mt-10 bg-gradient-to-r  from-pink-100 to-indigo-300 mx-3 text-transparent bg-clip-text text-left opacity-10'>FutCoin shop</h1>
+            <h1 className='text-[10.5vw] leading-[0.8] mt-10 bg-gradient-to-r  from-pink-100 to-indigo-300 mx-3 text-transparent bg-clip-text text-left opacity-10'>Global Fut services</h1>
           </div>
           <div className=' absolute right-0 bottom-0 p-3'>
             {/* <p>©copyright</p> */}

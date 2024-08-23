@@ -479,7 +479,7 @@ useEffect(() => {
       <motion.div ref={divRef3} style={{ opacity: progress4 }} className=" pt-40 flex flex-col justify-center items-center bg-[#150827]">
         <div className=" inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
         <div className="mt-8 sticky top-24 bg-gradient-to-br from-slate-200 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
-          Why Choose <div className="bg-gradient-to-r from-sky-500 to-indigo-600 inline-block text-transparent bg-clip-text ">FCS</div>
+          Why Choose <div className="bg-gradient-to-r from-sky-500 to-indigo-600 inline-block text-transparent bg-clip-text ">GFS</div>
         </div>
         <motion.div ref={divRef} className=" z-50 mt-"
         >
