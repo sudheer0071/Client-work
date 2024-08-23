@@ -95,7 +95,7 @@ export function Form() {
         <div  className="grid grid-cols-3 gap-5 mb-4">
         {/* <div className="mb-4"> */}
         {feilds.map((feild,idx)=> (
-          <LabelInputContainer>
+          <LabelInputContainer key={idx}>
            <Label  htmlFor={feild.id}> {feild.name} <div  className={` ${feild.id=='twitter'?"hidden":''} inline ml-1 text-purple-300`}>*</div> </Label >
            <Input className=" bg-gradient-to-r from-slate-800 to-indigo-800  " id={feild.id} placeholder={feild.placeholder} type={feild.name=='Email'?feild.type:feild.type=='select'?feild.type:'text'} />
           </LabelInputContainer>

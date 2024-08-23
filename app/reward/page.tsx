@@ -79,7 +79,7 @@ export default function Sell(){
     <div className=" ">
     <div className=" rounded-md p-1  bg-gradient-to-r from-slate-500 to-indigo-800  "> 
     {requirements.map((req ,idx)=>(
-      <RequirementCard name={req.name} points={req.points} i={idx} free={req.free} />
+      <RequirementCard key={idx} name={req.name} points={req.points} i={idx} free={req.free} />
     ))}
     </div>
     <div className=" mt-9">
