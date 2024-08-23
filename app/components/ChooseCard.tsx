@@ -21,22 +21,22 @@ export function ChooseCard({header, desc, image,i,range,progress, targetScale}:{
   return ( 
     <div  ref={container}  className=" flex justify-center items-center h-screen sticky top-32">
       <motion.div  style={{ scale, top:`calc(-10% + ${i*35}px)`}} className=" relative mt-">
-        <div className="   absolute h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.85] bg-red-500 rounded-full blur-3xl" />
-        <div className="relative shadow-lg shadow-sky-800 w-full  bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex justify-center items-center">
+        <div className="   absolute h-full w-full bg-gradient-to-r transition-all duration-1000 from-sky-200 to-teal-200 dark:from-blue-500 dark:to-teal-500 transform scale-[0.85] bg-red-500 rounded-full blur-3xl" />
+        <div className="relative shadow-lg shadow-sky-300 dark:shadow-sky-800 w-full transition-all duration-1000 bg-blue-400 dark:bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex justify-center items-center">
          <div className=" w-full">
 
-          <h1 className="font-bold justify-center flex text-4xl text-white mb-4 relative z-50"> 
+          <h1 className="font-bold justify-center transition-all duration-1000 flex text-5xl text-slate-800 font-sans dark:text-white mb-4 relative z-50"> 
             {header}
           </h1>
           <div className=" w-full flex ">
           <div className=" flex flex-col justify-center items-center">
           <div className="max-w-[820px]"> 
-                <p className="text-3xl text-slate-400 font-semibold mb-4 relative z-50">
+                <p className="text-3xl transition-all duration-1000 text-slate-800 dark:text-slate-400 font-semibold mb-4 relative z-50">
                   {desc} 
                 </p>
               </div>
 
-          <button className="border px-4 py-1 rounded-lg  border-gray-500 text-gray-300">
+          <button className="border px-4 py-1 rounded-lg duration-1000 transition-all border-gray-800 text-gray-900 dark:border-gray-500 dark:text-gray-300">
             Explore
           </button>
           </div>

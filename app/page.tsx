@@ -461,27 +461,25 @@ useEffect(() => {
     <SmoothScrolling> 
     {/* <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />  */}
      {/* <Boxes />   */}
-
-    
-
+ 
     <div ref={divRef1} id="Home" className=" overflow-hidden">
       <Home />
     </div>
 
     <div id="Buy" className=" bg-slate-900 z-30">
-      <motion.div ref={divRef5} className="bg-[#2c164b] h-[130vh] z-30 "style={{ opacity: progress5 , transform: inView ? 'translateY(0)' : 'translateY(100px)', }}>
+      <motion.div ref={divRef5} className=" transition-all duration-1000 bg-[#542a8f] dark:bg-[#2c164b] h-[130vh] z-30 "style={{ opacity: progress5 , transform: inView ? 'translateY(0)' : 'translateY(10px)', }}>
         <Services header="Our Safe Trading Service" />
       </motion.div>
     </div>
 
  
     <div className=" bg-[#2c164b] pb- 24">
-      <motion.div ref={divRef3} style={{ opacity: progress4 }} className=" pt-40 flex flex-col justify-center items-center bg-[#150827]">
+      <motion.div ref={divRef3} style={{ opacity: progress4 }} className=" pt-40 flex flex-col justify-center items-center bg-[#183c72] transition-all duration-1000 dark:bg-[#150827]">
         <div className=" inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
-        <div className="mt-8 sticky top-24 bg-gradient-to-br from-slate-200 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
-          Why Choose <div className="bg-gradient-to-r from-sky-500 to-indigo-600 inline-block text-transparent bg-clip-text ">GFS</div>
+        <div className="mt-8 sticky top-24 bg-gradient-to-br font-sans from-slate-100 to-slate-400 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
+          Why Choose <div className="bg-gradient-to-r from-sky-400 to-indigo-400 dark:from-sky-500 dark:to-indigo-600 inline-block text-transparent bg-clip-text ">GFS</div>
         </div>
-        <motion.div ref={divRef} className=" z-50 mt-"
+        <motion.div ref={divRef} className="z-50 mt-"
         >
           {Choosecard.map((card, idx) => {
             const targetScale = 1 - ((Choosecard.length - idx) * 0.05);
@@ -494,7 +492,7 @@ useEffect(() => {
     </div>
 
    <div className=" bg-[#150827]">
-    <motion.div ref={joinRef} className={` bg-gradient-to-r from-cyan-900 to-indigo-950 transition-all duration-500 relative pt-32    `}
+    <motion.div ref={joinRef} className={` bg-gradient-to-r from-slate-700 to-indigo-700 dark:from-cyan-900 dark:to-indigo-950 transition-all duration-1000 relative pt-32    `}
       style={{
         opacity: scrollYProgress,
         transform: inView ? 'translateY(0)' : 'translateY(10px)',
@@ -504,12 +502,12 @@ useEffect(() => {
    </div>
 
 <TracingBeam>
-<div className="  bg-gradient-to-r from-cyan-900  to-indigo-950 backdrop-blur-md">
- <motion.div ref={divRef2} style={{ opacity: progress2 , transform: inView ? 'translateY(0)' : 'translateY(100px)', }} className=" bg-slate-900 pt-2 z-40 "> 
+<div className="  bg-gradient-to-r from-cyan-900  to-indigo-950 backdrop-blur-md t-20">
+ <motion.div ref={divRef2} style={{ opacity: progress2 , transform: inView ? 'translateY(0)' : 'translateY(10px)', }} className=" bg-slate-900 pt-2 z-40 "> 
       <div className={` ${footer?' hidden':''} text-5xl font-bold sticky top-20 p-3 justify-center flex w-full  z-50 `}>
         How <div className=" inline bg-gradient-to-r from-pink-400 to-indigo-500 mx-3 text-transparent bg-clip-text "> FCS</div> Works
       </div>
-      <motion.div ref={divRef4} style={{ opacity: progress2 , transform: inView ? 'translateY(0)' : 'translateY(100px)', }} className="bg-[#150827] ">
+      <motion.div ref={divRef4} style={{ opacity: progress2 , transform: inView ? 'translateY(0)' : 'translateY(10px)', }} className="bg-[#150827] ">
         <HowitWorks/>
       </motion.div> 
  </motion.div>

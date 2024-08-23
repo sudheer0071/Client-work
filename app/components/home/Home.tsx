@@ -46,7 +46,7 @@ export default function Home() {
     });
   }, []);
   return ( 
-    <div className=" h-[120vh] relative w-full overflow-hidden pt-28 bg-[#150827] flex flex-col items-center justify-center rounded-lg">
+    <div className=" h-[120vh] relative w-full overflow-hidden pt-24 bg-[#150827] flex flex-col items-center justify-center rounded-lg">
     <div className="absolute inset-0 w-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" /> 
     <Boxes />
     <div className="flex justify-center ">
@@ -55,7 +55,7 @@ export default function Home() {
       </div>
     
       </div>
-      <div className=" flex justify-center h-screen -mt-6">
+      <div className=" flex justify-center h-screen -mt-8">
       <div ref={galleryRef} className=" gallery flex justify-center z-50 ">
         {images.map((img, idx)=>
            <img  

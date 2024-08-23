@@ -17,9 +17,9 @@ export function Services({header}:{header:string}) {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="mt-8 bg-gradient-to-br from-slate-300 to-slate-600 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+        className="mt-8 bg-gradient-to-br from-slate-200 to-slate-600 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
       >
-       Our <div className="bg-gradient-to-r from-sky-500 to-indigo-600 inline-block text-transparent bg-clip-text ">Safe Trading Service</div>
+       Our <div className="bg-gradient-to-r text-sh transition-all duration-1000 from-sky-300 to-purple-400 dark:from-sky-500 dark:to-indigo-600 inline-block text-transparent bg-clip-text  ">Safe Trading Service</div>
       </motion.h1>
       {/* <div className="text-5xl justify-center flex font-bold">
         card

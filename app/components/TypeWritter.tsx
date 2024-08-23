@@ -15,7 +15,7 @@ export function TypeWritter({Text}:{Text:string}) {
        </div>
       <div className=" flex justify-center">
          <HoverBorderGradient className=" p-4 px-6">
-          <a href=""> <ShoppingCart className=" inline"/> Buy</a>
+          <a href="/#Buy"> <ShoppingCart className=" inline"/> Buy</a>
          </HoverBorderGradient> 
          <div className=" ml-10  p-4 px-6 underline text-lg cursor-pointer">
          {/* <HoverBorderGradient className=" p-4 px-6">

@@ -10,8 +10,13 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode:'class',
   theme: {
     extend: {
+      textShadow:{
+        "glow":"0 0 0px #2a6ed3, 0 0 0px #2a6ed3, 0 0 0px #2a6ed3, 5px 1px 5px #0bf4f3, 1px 2px 10px #0bf4f3",
+      },
+
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -33,11 +38,13 @@ const config: Config = {
       boxShadow: {
         input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
       },
+
     },
   },
   plugins: [
     addVariablesForColors,
-  ],
+    require("tailwindcss-textshadow")
+  ], 
 };
 export default config;
 
