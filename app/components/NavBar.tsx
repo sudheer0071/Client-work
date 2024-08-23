@@ -211,10 +211,10 @@ export default function Navbar() {
                 setProject(false);
               }}
               className="p-4 rounded-md text-sm lg:text-xl relative no-underline duration-300 ease-in bg-transparent text-zinc-100" 
-              href="/reward"
+              href="/rewards"
             >
-              <Link href={'/reward'}>
-              Reward 
+              <Link href={'/rewards'}>
+              Rewards 
             </Link>
               <motion.div
                 animate={contact ? {

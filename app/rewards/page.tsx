@@ -17,7 +17,7 @@ export default function Sell(){
     console.log("setting footer");
     setAbout(false)
     setSkill(false)
-    setFooter(false)
+    // setFooter(false)
     setProject(false)
     setContact(true)
     
