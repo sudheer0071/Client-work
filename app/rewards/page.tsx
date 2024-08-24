@@ -130,7 +130,7 @@ const RewardCard = ( )=>{
           {reward.map((reward,idx)=>(
             <RwardText key={idx} name={reward.name} value={reward.value} />
           ))}  
-          <Meteors number={40} />
+          {/* <Meteors number={40} /> */}
         </div> 
         <div>
         </div>
@@ -187,7 +187,7 @@ const RewardCard2 = ( )=>{
         <div />
         <div className={` relative shadow-lg shadow-sky-800 w-full  bg-gray-900 border border-gray-800  px-4 py-4 h-full overflow-hidden rounded-2xl  `}>
         All rewards have a minimum purchase requirement and are valid for 30 days.
-          <Meteors number={40} />
+          {/* <Meteors number={40} /> */}
         </div> 
         <div>
         </div>

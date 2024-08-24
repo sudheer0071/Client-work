@@ -47,7 +47,7 @@ export function ChooseCard2({header, desc, desc2, image,i,range,progress, target
       </motion.div>
          </div>  
           </div>
-          <Meteors number={40} />
+          {/* <Meteors number={40} /> */}
         </div>
       </motion.div>
       </div>  
